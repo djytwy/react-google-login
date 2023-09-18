@@ -13,6 +13,7 @@ const useGoogleLogin = ({
   onAutoLoadFinished = () => {},
   onFailure = () => {},
   onRequest = () => {},
+  onCancel = () => {},
   onScriptLoadFailure,
   clientId,
   cookiePolicy,
@@ -89,7 +90,9 @@ const useGoogleLogin = ({
         window.google.accounts &&
         window.google.accounts.id.prompt(notification => {
           console.log('signIn -> prompt', notification, notification.getNotDisplayedReason(), notification.getSkippedReason())
-
+          if (notification.getSkippedReason() === "user_cancel") {
+            onCancel()
+          }
           if (notification.isNotDisplayed() && ['opt_out_or_no_session'].includes(notification.getNotDisplayedReason())) {
             console.log('signIn -> opt_out')
 

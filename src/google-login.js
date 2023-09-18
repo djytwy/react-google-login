@@ -11,6 +11,7 @@ const GoogleLogin = props => {
     onSuccess,
     onAutoLoadFinished,
     onRequest,
+    onCancel,
     onFailure,
     onScriptLoadFailure,
     tag,
@@ -44,6 +45,7 @@ const GoogleLogin = props => {
     onSuccess,
     onAutoLoadFinished,
     onRequest,
+    onCancel,
     onFailure,
     onScriptLoadFailure,
     clientId,
@@ -147,6 +149,7 @@ GoogleLogin.propTypes = {
   clientId: PropTypes.string.isRequired,
   jsSrc: PropTypes.string,
   onRequest: PropTypes.func,
+  onCancel: PropTypes.func,
   buttonText: PropTypes.node,
   scope: PropTypes.string,
   className: PropTypes.string,
@@ -188,7 +191,8 @@ GoogleLogin.defaultProps = {
   },
   icon: true,
   theme: 'light',
-  onRequest: () => {}
+  onRequest: () => {},
+  onCancel: () => {}
 }
 
 export default GoogleLogin

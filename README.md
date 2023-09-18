@@ -87,6 +87,7 @@ const { signIn, loaded } = useGoogleLogin({
     responseType,
     jsSrc,
     onRequest,
+    onCancel,
     prompt
   })
 ```
@@ -150,6 +151,7 @@ Use GoogleLogout button to logout the user from google.
 |   onFailure  | function |               REQUIRED               |                  |
 |   onScriptLoadFailure  | function |         -                  | If defined, will be called when loading the 'google-login' script fails (otherwise onFailure will be called) |
 |   onRequest  | function |                   -                  |                  |
+|   onCancel  | function |                   -                  |                  |
 |   onAutoLoadFinished  | function |                   -         |                  |
 |   buttonText |  string  |             Login with Google        |                  |
 |   className  |  string  |                   -                  |                  |

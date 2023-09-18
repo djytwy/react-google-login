@@ -1,5 +1,5 @@
 {
-  "name": "@dump-work/react-google-login",
+  "name": "@ambrus/react-google-login",
   "version": "6.0.14",
   "description": "A Google Login Component for React",
   "main": "dist/google-login.js",
@@ -24,7 +24,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dump-work/react-google-login.git"
+    "url": "https://github.com/djytwy/react-google-login.git"
   },
   "keywords": [
     "react",
@@ -43,9 +43,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dump-work/react-google-login/issues"
+    "url": "https://github.com/djytwy/react-google-login/issues"
   },
-  "homepage": "https://github.com/dump-work/react-google-login",
+  "homepage": "https://github.com/djytwy/react-google-login",
   "dependencies": {
     "@types/react": "*",
     "jwt-decode": "^3.1.2",
@@ -98,5 +98,8 @@
       "@babel/preset-env",
       "@babel/preset-react"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
