@@ -91,6 +91,7 @@ const useGoogleLogin = ({
         window.google.accounts.id.prompt(notification => {
           console.log('signIn -> prompt', notification, notification.getNotDisplayedReason(), notification.getSkippedReason())
           if (notification.getSkippedReason() === "user_cancel") {
+            // add cancel click emit event
             onCancel()
           }
           if (notification.isNotDisplayed() && ['opt_out_or_no_session'].includes(notification.getNotDisplayedReason())) {
